@@ -1,0 +1,3502 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.dronetology.net/dronetology#"
+     xml:base="http://www.dronetology.net/dronetology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:geo="http://www.opengis.net/ont/geosparql"
+     xmlns:ont="http://www.opengis.net/ont/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pos="http://www.w3.org/2003/01/geo/pos#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ssn="http://www.w3.org/ns/ssn/"
+     xmlns:www="http://www.dronetology.net/dronetology#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:DUL1="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:geo1="http://www.w3.org/2003/01/geo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#">
+    <owl:Ontology rdf:about="http://www.dronetology.net/dronetology#">
+        <dc:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dronetology aims to define the knowledge necessary for a UAV to operate autonomously and infer new knowledge,
+necessary for a UAV to operate autonomously and to infer new knowledge to improve the efficiency and safety of the mission.</dc:abstract>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alberto Córdoba</dc:contributor>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jesús Villadangos</dc:contributor>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">José Javier Astrain</dc:contributor>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Martín-Lammerding</dc:creator>
+        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:rights>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dronetology</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/abstract -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/subject -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/subject"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasInterval -->
+
+    <owl:AnnotationProperty rdf:about="http://www.dronetology.net/dronetology#hasInterval"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasLatLon -->
+
+    <owl:AnnotationProperty rdf:about="http://www.dronetology.net/dronetology#hasLatLon"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasMeasurementZValue -->
+
+    <owl:AnnotationProperty rdf:about="http://www.dronetology.net/dronetology#hasMeasurementZValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#VectorParameter"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasParameterName -->
+
+    <owl:AnnotationProperty rdf:about="http://www.dronetology.net/dronetology#hasParameterName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasParameterUnit -->
+
+    <owl:AnnotationProperty rdf:about="http://www.dronetology.net/dronetology#hasParameterUnit"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasType -->
+
+    <owl:AnnotationProperty rdf:about="http://www.dronetology.net/dronetology#hasType"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasTypeId -->
+
+    <owl:AnnotationProperty rdf:about="http://www.dronetology.net/dronetology#hasTypeId"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#satisfies"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparqllat -->
+
+    <owl:AnnotationProperty rdf:about="http://www.opengis.net/ont/geosparqllat"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparqllat_long -->
+
+    <owl:AnnotationProperty rdf:about="http://www.opengis.net/ont/geosparqllat_long"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparqllong -->
+
+    <owl:AnnotationProperty rdf:about="http://www.opengis.net/ont/geosparqllong"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/lat -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/lat"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/lat_long -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/lat_long"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/long -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/01/geo/long"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#IsWaypointOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#IsWaypointOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Waypoint"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#FlightPathVector"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#FlightPlan"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#combinationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#combinationOf">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#decompositionOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#combinesTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#combinesTo">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#decomposesTo"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#complyWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#complyWith">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#DroneRegulation"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.dronetology.net/dronetology#isFulfilledBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#constrainedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#constrainedBy">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#constrains"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Constraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#constrains -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#constrains">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Constraint"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#decomposesTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#decomposesTo">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#decompositionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#decompositionOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#derive -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#derive">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#derivedFrom"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#derivedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#derivedFrom">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasComponent">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isComponentOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasDirectPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasDirectPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.dronetology.net/dronetology#hasPart"/>
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isDirectPartOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasDrone -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasDrone">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Swarm"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasElement -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasElement">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isElementOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasExpression -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasExpression">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isExpressionOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Constraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasFeature -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasFeature">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isFeatureOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Feature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasFunction">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isFunctionOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasManufacturer -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasManufacturer">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Manufacturer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasMission -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasMission">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isMissionOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasParameter -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasParameter">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isParameterOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Component"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Feature"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasPart">
+        <owl:equivalentProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasPilot -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasPilot">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Pilot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasProduct -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasProduct">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isProductOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasVertex -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasVertex">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isVertexOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#AirSpaceVolume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasWaypoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasWaypoint">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#FlightPathVector"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#FlightPlan"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Waypoint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isActivatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isActivatedBy">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Alarm"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#MessagesReceived"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isComponentOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isDirectPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isDirectPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.dronetology.net/dronetology#isPartOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isElementOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isElementOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isExpressionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isExpressionOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Constraint"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isFeatureOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isFeatureOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Feature"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isFulfilledBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isFulfilledBy">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#DroneRegulation"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isFunctionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isFunctionOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isMissionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isMissionOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isParameterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isParameterOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Feature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isPilotOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isPilotOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Pilot"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isProductOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isProductOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Product"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isReqSatisfiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isReqSatisfiedBy">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#satisfiesReq"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isStoredIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isStoredIn">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#stores"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Photograph"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Video"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#DataStorageDevice"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isTriggeredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isTriggeredBy">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#MessagesReceived"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Alarm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isVertexOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isVertexOf">
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#AirSpaceVolume"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#satisfiedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#satisfiedBy">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#satisfies"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#satisfies -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#satisfies">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#satisfiesReq -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#satisfiesReq">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#stores -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#stores">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#DataStorageDevice"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Photograph"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Video"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasADSBId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasADSBId">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#ADS-BReceived"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasAccelerometerXYZ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasAccelerometerXYZ">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasAirspeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasAirspeed">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasAlarmLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasAlarmLevel">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Alarm"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasAttitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasAttitude">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasBarometricMeasurement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasBarometricMeasurement">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasBatteryCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasBatteryCapacity">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasClimbRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasClimbRate">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasCommandOrder -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasCommandOrder">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Command"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasComponentDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasComponentDescription">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasConstraintDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasConstraintDescription">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Constraint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasConstraintPostedBy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasConstraintPostedBy">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Constraint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasConstraintStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasConstraintStatus">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Constraint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasDepth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasDepth">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasDistanceADSBtoUAS -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasDistanceADSBtoUAS">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#ADS-BReceived"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasElapsedFlightSeconds -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasElapsedFlightSeconds">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasExecutionTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasExecutionTime">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Command"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasFeatureDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasFeatureDescription">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Feature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasFeatureType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasFeatureType">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Feature"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasFixedOrCopterStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasFixedOrCopterStatus">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasFlightAuthorization -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasFlightAuthorization">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasFlightNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasFlightNumber">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasFlightPathVectorLenght -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasFlightPathVectorLenght">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#FlightPathVector"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasFunctionNoun -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasFunctionNoun">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasFunctionVerb -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasFunctionVerb">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasGPSAltitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasGPSAltitude">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasGPSPosition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasGPSPosition">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#FlightTrack"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasGPSSatellites -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasGPSSatellites">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasGroundSpeed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasGroundSpeed">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasGyroscopeXYZ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasGyroscopeXYZ">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasHeight">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasICAO24 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasICAO24">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#ADS-BReceived"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasIdentificator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasIdentificator">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasMagnometerXYZ -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasMagnometerXYZ">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasMaxAllowedAltitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasMaxAllowedAltitude">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#DroneRegulation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasMissionId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasMissionId">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasMode -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasMode">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasMotorsPWM -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasMotorsPWM">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasObstacleDistance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasObstacleDistance">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasOwnerIdentificator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasOwnerIdentificator">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasParameterDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasParameterDescription">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasParameterValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasParameterValue"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasRemoteId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasRemoteId">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasRequirementDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasRequirementDescription">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasRequirementPostedBy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasRequirementPostedBy">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasRequirementStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasRequirementStatus">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasRequirementValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasRequirementValue">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasSKU -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasSKU">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasSerialNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasSerialNumber">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasStatus">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasTargetAltitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasTargetAltitude">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasTargetPosition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasTargetPosition">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasTemperatureMeasurement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasTemperatureMeasurement">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasThrottle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasThrottle">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasTimestamp -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasTimestamp">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#FlightTrack"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MessagesReceived"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Telemetry"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasTypeOfValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasTypeOfValue">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasUAId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasUAId">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasUnit">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasValue">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasVerifyMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasVerifyMethod">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasVersionNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasVersionNumber">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasWeight">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasWidth">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#inferred -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#inferred">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Command"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isForbiddenFlightArea -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#isForbiddenFlightArea">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Waypoint"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isNighttime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#isNighttime">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt/Quantity -->
+
+    <owl:Class rdf:about="http://qudt.org/schema/qudt/Quantity"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#AA -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AA">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RPA"/>
+        <rdfs:subClassOf></rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#AAS -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AAS">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AA"/>
+        <rdfs:comment>Autonomous Unmanned Aerial System</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#ADS-BReceived -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ADS-BReceived">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MessagesReceived"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#AUAS -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AUAS">
+        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#UA+AO"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UAS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Accelerometer -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Accelerometer">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#InertialNavigationComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Adaptation -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Adaptation">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#AerialDevelopmentPlatform -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AerialDevelopmentPlatform">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#SoftwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#AirCraftComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AirCraftComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#EnergyReloadComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStation"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LaunchSystem"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PilotlessAirCraft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#AirSpaceVolume -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AirSpaceVolume">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Alarm -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Alarm">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionEventElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Antenna -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Antenna">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#CommunicationSystem"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#DataProcessingBoard"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#DataStorageDevice"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#EnergyStorageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Engine"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FlightControllerUnit"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#InertialNavigationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#AntiUASWeapon -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AntiUASWeapon">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AuxiliaryComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#AntiVibrationComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AntiVibrationComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Autodiagnosis -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Autodiagnosis">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#AutonomousMission -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AutonomousMission">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasElement"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#FlightPlan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RemoteGuided"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#AuxiliaryCommand -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AuxiliaryCommand">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Command"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#AuxiliaryComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AuxiliaryComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#BVLOSMission -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#BVLOSMission">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Basic -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Basic">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Battery -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Battery">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#EnergyStorageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FuelTank"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#BatteryAlarm -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#BatteryAlarm">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Alarm"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#NoFlyZoneAlarm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Broadcast_Remote_ID -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Broadcast_Remote_ID">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RemoteID"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#C2Link -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#C2Link">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#DataLink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Cabin -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Cabin">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#ConstantSection"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FrameKit"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Nose"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Tail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Cable -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Cable">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Camera -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Camera">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Catapult -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Catapult">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AuxiliaryComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#ChargingStation -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ChargingStation">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#EnergyReloadComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RefuelingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#ColaborativeConflict -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ColaborativeConflict">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Conflict"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Collaboration -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Collaboration">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#CollisionAlarm -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#CollisionAlarm">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Alarm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#CollisionAvoidance -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#CollisionAvoidance">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#CollisionRisk -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#CollisionRisk">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#CombustionEngine -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#CombustionEngine">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Engine"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#ElectricalEngine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Command -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Command">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionPointElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#CommunicationSystem -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#CommunicationSystem">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#DataProcessingBoard"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#DataStorageDevice"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#EnergyStorageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Engine"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FlightControllerUnit"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#InertialNavigationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#CommunicationsLostRisk -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#CommunicationsLostRisk">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Component -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Component">
+        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#Part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#ComponentMalfunctionRisk -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ComponentMalfunctionRisk">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Conflict -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Conflict">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Connector -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Connector">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#ConstantSection -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ConstantSection">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FrameKit"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Nose"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Tail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Constraint -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Constraint"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Cooperation -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Cooperation">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Coordination -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Coordination">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Copter -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Copter">
+        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#RotorCraft"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#VTOLCraft"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasComponent"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#Rotor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FixedWingCraft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#CounterUASSystem -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#CounterUASSystem">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AuxiliaryComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#CruisePlan -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#CruisePlan">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#FlightPlan"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LandingPlan"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#TakeoffPlan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#DataLink -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#DataLink">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#DataProcessingBoard -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#DataProcessingBoard">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#DataStorageDevice"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#EnergyStorageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Engine"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FlightControllerUnit"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#InertialNavigationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#DataProcessingSystem -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#DataProcessingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#GroundStationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#DataStorageSystem"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStationAntenna"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStationCommunicationSystem"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#MissionCommanderStation"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PayloadOperatorStation"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RemotePilotConsole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#DataStorageDevice -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#DataStorageDevice">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#EnergyStorageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Engine"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FlightControllerUnit"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#InertialNavigationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#DataStorageSystem -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#DataStorageSystem">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#GroundStationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStationAntenna"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStationCommunicationSystem"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#MissionCommanderStation"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PayloadOperatorStation"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RemotePilotConsole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#DeathRisk -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#DeathRisk">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Direct_Remote_ID -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Direct_Remote_ID">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RemoteID"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Drone -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Drone">
+        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#MannedAircraft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#DroneRegulation -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#DroneRegulation"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#ElectricalEngine -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ElectricalEngine">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#ElectronicSpeedController -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ElectronicSpeedController">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#EmergencyMission -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#EmergencyMission">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#EnaireComplaince -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#EnaireComplaince">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#DroneRegulation"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasPilot"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#Pilot"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#isElementOf"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#EnergyReloadComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#EnergyReloadComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStation"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LaunchSystem"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PilotlessAirCraft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#EnergyStorageComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#EnergyStorageComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Engine"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FlightControllerUnit"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#InertialNavigationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Engine -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Engine">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FlightControllerUnit"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#InertialNavigationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Feature -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Feature"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FixedWingCraft -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FixedWingCraft">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasComponent"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#Wing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RotorCraft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FixedWingVTOLCraft -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FixedWingVTOLCraft">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#FixedWingCraft"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#VTOLCraft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Flight -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Flight">
+        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FlightAreaMission -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlightAreaMission">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FlightControlApp -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlightControlApp">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#SoftwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FlightControlFirmware -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlightControlFirmware">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#SoftwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FlightControllerUnit -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlightControllerUnit">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#InertialNavigationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FlightPathVector -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlightPathVector">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasWaypoint"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#Waypoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FlightPlan -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlightPlan">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasWaypoint"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#Waypoint"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasWaypoint"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#HomeLocation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a flightplan Is the union of the three subclasses</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FlightTrack -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlightTrack">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionPointElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>Flight track sequence</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FlyZone -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlyZone">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirSpaceVolume"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#NoFlyZone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#ForcedLandingRisk -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ForcedLandingRisk">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FrameKit -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FrameKit">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Nose"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Tail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FuelTank -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FuelTank">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#EnergyStorageComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Function -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Function"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FuselageComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FuselageComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#InertialNavigationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#GCS -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#GCS">
+        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#GroundStation"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#GearBox -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#GearBox">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RotorComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Propeller"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Rotor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Geofence -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Geofence">
+        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#NoFlyZone"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirSpaceVolume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#GoToCommand -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#GoToCommand">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Command"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#GoodsDamageRisk -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#GoodsDamageRisk">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#GroundStation -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#GroundStation">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LaunchSystem"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PilotlessAirCraft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#GroundStationAntenna -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#GroundStationAntenna">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#GroundStationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStationCommunicationSystem"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#MissionCommanderStation"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PayloadOperatorStation"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RemotePilotConsole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#GroundStationCommunicationSystem -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#GroundStationCommunicationSystem">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#GroundStationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#MissionCommanderStation"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PayloadOperatorStation"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RemotePilotConsole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#GroundStationComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#GroundStationComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LaunchSystem"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PilotlessAirCraft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Group1 -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group1">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Group2 -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group2">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Group3 -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group3">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Group4 -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group4">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Group5 -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group5">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Gyroscope -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Gyroscope">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#InertialNavigationComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#HALE -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#HALE">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#HardwareComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#HardwareComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#SoftwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#HomeLocation -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#HomeLocation">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Waypoint"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#InertialNavigationComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#InertialNavigationComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#InterComponentMessages -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#InterComponentMessages">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#SoftwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Iteration -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Iteration">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LALE -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LALE">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LASE -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LASE">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LandingComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LandingComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LandingFeet -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LandingFeet">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LandingGear -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LandingGear">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LandingLeg -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LandingLeg">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LandingPlan -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LandingPlan">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#FlightPlan"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#TakeoffPlan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LandingWheel -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LandingWheel">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LargeUA -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LargeUA">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LaunchSystem -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LaunchSystem">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PilotlessAirCraft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LiftGeneratorComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LiftGeneratorComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LostPayloadRisk -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LostPayloadRisk">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LowAltitudeCollisionRisk -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LowAltitudeCollisionRisk">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#CollisionRisk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MALE -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MALE">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MAV -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MAV">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MannedAircraft -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MannedAircraft">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Manufacturer -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Manufacturer"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MaxFlightAltitude -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MaxFlightAltitude">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MaxFlightSpeed -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MaxFlightSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MediumUA -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MediumUA">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Messages -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Messages">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionPointElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MessagesReceived -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MessagesReceived">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Messages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MessagesSent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MessagesSent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Messages"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Mission -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Mission">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasElement"/>
+                <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">only one mission can be stored in copter, is a multiple command sequence</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionAdaptation -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionAdaptation">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionEventElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionAirSpace -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionAirSpace">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#FlyZone"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionObjectElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionCollaboration -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionCollaboration">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionEventElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionCommanderStation -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionCommanderStation">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#GroundStationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PayloadOperatorStation"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RemotePilotConsole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionComplaince -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionComplaince">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionConflict -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionConflict">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Conflict"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionObjectElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionElement -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionElement"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionEventElement -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionEventElement">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionObjectElement -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionObjectElement">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionElement"/>
+                    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionObjetive -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionObjetive">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionPilot -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionPilot">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionPointElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Pilot"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionPointElement -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionPointElement">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionElement"/>
+                    <rdf:Description rdf:about="http://www.opengis.net/ont/sf#Point"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionRisk -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionRisk">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionTemporalElement -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionElement"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2006/time#TemporalEntity"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#NEDVelocityCommand -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#NEDVelocityCommand">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Command"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#NoFlyZone -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#NoFlyZone">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirSpaceVolume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#NoFlyZoneAlarm -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#NoFlyZoneAlarm">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Alarm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#NonComplianceRisk -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#NonComplianceRisk">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Nose -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Nose">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Tail"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Obstacle -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Obstacle">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#OnboardComputer -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#OnboardComputer">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#OnboardSensor -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#OnboardSensor">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Operator -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Operator">
+        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#Pilot"/>
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Parameter -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Parameter"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Part -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Part"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#PartialAutonomous -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#PartialAutonomous">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Payload -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Payload">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PowerDistributionBoard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#PayloadLink -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#PayloadLink">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#DataLink"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#PayloadOperatorStation -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#PayloadOperatorStation">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#GroundStationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RemotePilotConsole"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#PeopleHurtRisk -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#PeopleHurtRisk">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Perception -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Perception">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Photograph -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Photograph">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#isStoredIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#DataStorageDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Video"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Pilot -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Pilot">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#PilotEmergencyRisk -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#PilotEmergencyRisk">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#PilotlessAirCraft -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#PilotlessAirCraft">
+        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#UAV"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasDirectPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#PlannedMission -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#PlannedMission">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#PowerDistributionBoard -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#PowerDistributionBoard">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Product -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Product"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Propeller -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Propeller">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RotorComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Rotor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#ProvokedFireRisk -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ProvokedFireRisk">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Pusher -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Pusher">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Propeller"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Tractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#RPA -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RPA">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf></rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#RPAS -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RPAS">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RPA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#RecoveryNet -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RecoveryNet">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AuxiliaryComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#RefuelingSystem -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RefuelingSystem">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#EnergyReloadComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#RemoteGuided -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RemoteGuided">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasElement"/>
+                <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#FlightPlan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#isMissionOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Drone"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasComponent"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#DataLink"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasElement"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#Pilot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#RemoteID -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RemoteID">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#CommunicationSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#RemoteIdentification -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RemoteIdentification"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#RemotePilotConsole -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RemotePilotConsole">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#GroundStationComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#RemoteSensor -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RemoteSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/SensingDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Requirement -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Requirement">
+        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#Specification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Risk -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Risk">
+        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#Threat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#RiskImpact -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RiskImpact"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#RiskLikelihood -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RiskLikelihood"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Rotor -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Rotor">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://www.dronetology.net/dronetology#RotorComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Wing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#RotorComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RotorComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#RotorCraft -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RotorCraft">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#VTOLCraft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#STOLCraft -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#STOLCraft">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#VTOLCraft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#ScheduledFP -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ScheduledFP">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#FlightPlan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#SimulatedTelemetry -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#SimulatedTelemetry">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#SmallUA -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#SmallUA">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#SoftwareComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#SoftwareComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Specification -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Specification"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Swarm -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Swarm">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasDrone"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Tail -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Tail">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#TakeoffPlan -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#TakeoffPlan">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#FlightPlan"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Telemetry -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Telemetry">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionPointElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Threat -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Threat"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Tractor -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Tractor">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Propeller"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#UA -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#UA">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#UAS -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#UAS">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasComponent"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#DataLink"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasComponent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#GroundStation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#UAV -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#UAV">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#USBKey -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#USBKey">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#DataStorageDevice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#UnidentifiedObject -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#UnidentifiedObject">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#VALE -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#VALE">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#VLOSMission -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#VLOSMission">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#VTOLCraft -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#VTOLCraft">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#VerticalTakeOffLandingMission -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#VerticalTakeOffLandingMission">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Vertiport -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Vertiport">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#VerySmallUA -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#VerySmallUA">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasWeight"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">250.0</xsd:maxExclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Video -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Video">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionObjectElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#isStoredIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#DataStorageDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Waypoint -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Waypoint">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionPointElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#WaypointMission -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#WaypointMission">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Weapon -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Weapon">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#WeatherReport -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#WeatherReport">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Weight -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Weight">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Wing -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Wing">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://www.dronetology.net/dronetology#WingComponent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#WingComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#WingComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#eVTOL -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#eVTOL">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#DroneRegulation_(EU)_2019/945 -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#DroneRegulation_(EU)_2019/945">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#DroneRegulation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#UA+AO -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#UA+AO">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasMission"/>
+                <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#AutonomousMission"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#SpatialObject -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/sf#Point -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/sf#Point"/>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/SpatialThing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/SpatialThing"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/SensingDevice -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/ssn/SensingDevice"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Group1"/>
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Group2"/>
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Group3"/>
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Group4"/>
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Group5"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#HALE"/>
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#LALE"/>
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#LASE"/>
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MALE"/>
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MAV"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
