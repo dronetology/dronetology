@@ -1,29 +1,31 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.dronetology.net/dronetology#"
      xml:base="http://www.dronetology.net/dronetology"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ssn="http://www.w3.org/ns/ssn/"
+     xmlns:geo1="http://www.w3.org/2003/01/geo/"
      xmlns:geo="http://www.opengis.net/ont/geosparql"
      xmlns:ont="http://www.opengis.net/ont/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:pos="http://www.w3.org/2003/01/geo/pos#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:ssn="http://www.w3.org/ns/ssn/"
-     xmlns:www="http://www.dronetology.net/dronetology#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:pos="http://www.w3.org/2003/01/geo/pos#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:DUL1="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
-     xmlns:geo1="http://www.w3.org/2003/01/geo/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:time="http://www.w3.org/2006/time#">
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:www="http://www.dronetology.net/dronetology#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://www.dronetology.net/dronetology#">
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alberto Córdoba</dc:contributor>
+        <terms:license rdf:resource="http://www.dronetology.net/dronetology#DronetologyLicenseTerms"/>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">José Javier Astrain</dc:contributor>
         <dc:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dronetology aims to define the knowledge necessary for a UAV to operate autonomously and infer new knowledge,
 necessary for a UAV to operate autonomously and to infer new knowledge to improve the efficiency and safety of the mission.</dc:abstract>
-        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alberto Córdoba</dc:contributor>
-        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jesús Villadangos</dc:contributor>
-        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">José Javier Astrain</dc:contributor>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Martín-Lammerding</dc:creator>
         <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></dc:rights>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jesús Villadangos</dc:contributor>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Martín-Lammerding</dc:creator>
         <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dronetology</dc:title>
     </owl:Ontology>
     
@@ -58,6 +60,12 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/rights -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
@@ -73,6 +81,12 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://purl.org/dc/elements/1.1/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
@@ -155,6 +169,18 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.w3.org/2002/07/owl#maxCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#maxCardinality"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#minCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minCardinality"/>
+    
+
+
     <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
@@ -190,19 +216,15 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#IsWaypointOf -->
+    <!-- http://qudt.org/schema/qudt/hasUnit -->
 
-    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#IsWaypointOf">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Waypoint"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#FlightPathVector"/>
-                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#FlightPlan"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/hasUnit"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/value -->
+
+    <owl:ObjectProperty rdf:about="http://qudt.org/schema/qudt/value"/>
     
 
 
@@ -229,8 +251,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#complyWith -->
 
     <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#complyWith">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#UA"/>
-        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#DroneRegulation"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Regulations"/>
         <owl:propertyDisjointWith rdf:resource="http://www.dronetology.net/dronetology#isFulfilledBy"/>
     </owl:ObjectProperty>
     
@@ -273,19 +295,19 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#derive -->
+    <!-- http://www.dronetology.net/dronetology#derivedFrom -->
 
-    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#derive">
-        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#derivedFrom"/>
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#derivedFrom">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#derives"/>
         <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
         <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.dronetology.net/dronetology#derivedFrom -->
+    <!-- http://www.dronetology.net/dronetology#derives -->
 
-    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#derivedFrom">
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#derives">
         <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
         <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
     </owl:ObjectProperty>
@@ -362,10 +384,37 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#hasHeight -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasHeight">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isHeightOf"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionObjectElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionPointElement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Height"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasLicence -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasLicence">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isLicenceOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#MissionPilot"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#PilotLicence"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#hasManufacturer -->
 
     <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasManufacturer">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Manufacturer"/>
     </owl:ObjectProperty>
     
@@ -377,6 +426,44 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
         <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isMissionOf"/>
         <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasMissionMode -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasMissionMode">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#MissionMode"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.dronetology.net/dronetology#isMissionModeOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasMissionPriority -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasMissionPriority">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#MissionPriority"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasMissionStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasMissionStatus">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#MissionStatus"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.dronetology.net/dronetology#isMissionStatusOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasObjetive -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasObjetive">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#MissionObjetive"/>
     </owl:ObjectProperty>
     
 
@@ -394,6 +481,16 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasParameterQuantity -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasParameterQuantity">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isParameterQuantityOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
     </owl:ObjectProperty>
     
 
@@ -430,11 +527,22 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#hasVertex -->
+    <!-- http://www.dronetology.net/dronetology#hasSensedQuantity -->
 
-    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasVertex">
-        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isVertexOf"/>
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#AirSpaceVolume"/>
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasSensedQuantity">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isSensedQuantityOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#MissionSensorData"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasTelemetryQuantity -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasTelemetryQuantity">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isTelemetryQuantityOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
     </owl:ObjectProperty>
     
 
@@ -442,11 +550,12 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#hasWaypoint -->
 
     <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasWaypoint">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isWaypointOf"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#FlightPathVector"/>
                     <rdf:Description rdf:about="http://www.dronetology.net/dronetology#FlightPlan"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#FlightSegments"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -455,11 +564,50 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#hasWeatherParameter -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasWeatherParameter">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isWeatherParameterOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#WeatherReport"/>
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#hasWeight -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#hasWeight">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#isWeightOf"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Weight"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#installedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#installedAt">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#instantOfInstallation"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Instant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#instantOfInstallation -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#instantOfInstallation">
+        <rdfs:domain rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#isActivatedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isActivatedBy">
         <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Alarm"/>
-        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#MessagesReceived"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Received"/>
     </owl:ObjectProperty>
     
 
@@ -513,8 +661,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#isFulfilledBy -->
 
     <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isFulfilledBy">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#DroneRegulation"/>
-        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Regulations"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:ObjectProperty>
     
 
@@ -528,11 +676,71 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#isHeightOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isHeightOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Height"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionObjectElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionPointElement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isLicenceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isLicenceOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#PilotLicence"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#MissionPilot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isMissionModeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isMissionModeOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#MissionMode"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#isMissionOf -->
 
     <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isMissionOf">
         <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
-        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isMissionPriorityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isMissionPriorityOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#MissionPriority"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isMissionStatusOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isMissionStatusOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#MissionStatus"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isObjetiveOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isObjetiveOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#MissionObjetive"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
     </owl:ObjectProperty>
     
 
@@ -543,6 +751,15 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
         <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
         <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
         <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Feature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isParameterQuantityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isParameterQuantityOf">
+        <rdfs:domain rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
     </owl:ObjectProperty>
     
 
@@ -585,6 +802,15 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#isSensedQuantityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isSensedQuantityOf">
+        <rdfs:domain rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#MissionSensorData"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#isStoredIn -->
 
     <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isStoredIn">
@@ -602,19 +828,73 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#isTelemetryQuantityOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isTelemetryQuantityOf">
+        <rdfs:domain rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#isTriggeredBy -->
 
     <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isTriggeredBy">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#MessagesReceived"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Received"/>
         <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Alarm"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.dronetology.net/dronetology#isVertexOf -->
+    <!-- http://www.dronetology.net/dronetology#isWaypointOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isVertexOf">
-        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#AirSpaceVolume"/>
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isWaypointOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Waypoint"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#FlightPlan"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#FlightSegments"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isWeatherParameterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isWeatherParameterOf">
+        <rdfs:domain rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#WeatherReport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#isWeightOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#isWeightOf">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Weight"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#replacedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#replacedBy">
+        <owl:inverseOf rdf:resource="http://www.dronetology.net/dronetology#replaces"/>
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#replaces -->
+
+    <owl:ObjectProperty rdf:about="http://www.dronetology.net/dronetology#replaces">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Component"/>
     </owl:ObjectProperty>
     
 
@@ -680,74 +960,11 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#hasADSBId -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasADSBId">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#ADS-BReceived"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasAccelerometerXYZ -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasAccelerometerXYZ">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasAirspeed -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasAirspeed">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.dronetology.net/dronetology#hasAlarmLevel -->
 
     <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasAlarmLevel">
         <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Alarm"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasAttitude -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasAttitude">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasBarometricMeasurement -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasBarometricMeasurement">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasBatteryCapacity -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasBatteryCapacity">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasClimbRate -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasClimbRate">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
@@ -797,42 +1014,6 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#hasDepth -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasDepth">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#UA"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasDistanceADSBtoUAS -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasDistanceADSBtoUAS">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#ADS-BReceived"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasElapsedFlightSeconds -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasElapsedFlightSeconds">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasExecutionTime -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasExecutionTime">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Command"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.dronetology.net/dronetology#hasFeatureDescription -->
 
     <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasFeatureDescription">
@@ -851,38 +1032,11 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#hasFixedOrCopterStatus -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasFixedOrCopterStatus">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.dronetology.net/dronetology#hasFlightAuthorization -->
 
     <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasFlightAuthorization">
         <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasFlightNumber -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasFlightNumber">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasFlightPathVectorLenght -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasFlightPathVectorLenght">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#FlightPathVector"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
@@ -905,93 +1059,18 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#hasGPSAltitude -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasGPSAltitude">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasGPSPosition -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasGPSPosition">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#FlightTrack"/>
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasGPSSatellites -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasGPSSatellites">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasGroundSpeed -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasGroundSpeed">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasGyroscopeXYZ -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasGyroscopeXYZ">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasHeight -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasHeight">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#UA"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasICAO24 -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasICAO24">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#ADS-BReceived"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.dronetology.net/dronetology#hasIdentificator -->
 
     <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasIdentificator">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Drone"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Part"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasMagnometerXYZ -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasMagnometerXYZ">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasMaxAllowedAltitude -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasMaxAllowedAltitude">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#DroneRegulation"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
@@ -1000,41 +1079,6 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasMissionId">
         <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasMode -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasMode">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasMotorsPWM -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasMotorsPWM">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasObstacleDistance -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasObstacleDistance">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasOwnerIdentificator -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasOwnerIdentificator">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1049,15 +1093,10 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#hasParameterValue -->
+    <!-- http://www.dronetology.net/dronetology#hasRawHEXContent -->
 
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasParameterValue"/>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasRemoteId -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasRemoteId">
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasRawHEXContent">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#CommunicationMessage"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1111,105 +1150,14 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#hasSerialNumber -->
 
     <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasSerialNumber">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#UA"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasStatus -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasStatus">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasTargetAltitude -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasTargetAltitude">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasTargetPosition -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasTargetPosition">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasTemperatureMeasurement -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasTemperatureMeasurement">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasThrottle -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasThrottle">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasTimestamp -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasTimestamp">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#FlightTrack"/>
-                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MessagesReceived"/>
-                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Telemetry"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Drone"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Part"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasTypeOfValue -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasTypeOfValue">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasUAId -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasUAId">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#UA"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasUnit -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasUnit">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasValue -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasValue">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -1233,21 +1181,11 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#hasWeight -->
+    <!-- http://www.dronetology.net/dronetology#hasWeatherProvider -->
 
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasWeight">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Component"/>
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#hasWidth -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasWidth">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#UA"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasWeatherProvider">
+        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#WeatherReport"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -1256,25 +1194,6 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#inferred">
         <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Command"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#isForbiddenFlightArea -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#isForbiddenFlightArea">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Waypoint"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#isNighttime -->
-
-    <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#isNighttime">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
     
@@ -1291,6 +1210,12 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://purl.org/dc/terms/LicenseDocument -->
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/LicenseDocument"/>
+    
+
+
     <!-- http://qudt.org/schema/qudt/Quantity -->
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt/Quantity"/>
@@ -1300,9 +1225,9 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#AA -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#AA">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RPA"/>
-        <rdfs:subClassOf></rdfs:subClassOf>
+        <rdfs:subClassOf>Autonomous Aircraft</rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1311,15 +1236,15 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#AAS">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AA"/>
-        <rdfs:comment>Autonomous Unmanned Aerial System</rdfs:comment>
+        <rdfs:comment>Autonomous Aerial System</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.dronetology.net/dronetology#ADS-BReceived -->
+    <!-- http://www.dronetology.net/dronetology#ADSB -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ADS-BReceived">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MessagesReceived"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ADSB">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Received"/>
     </owl:Class>
     
 
@@ -1327,8 +1252,26 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#AUAS -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#AUAS">
-        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#UA+AO"/>
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UAS"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#UAS"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasMission"/>
+                        <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#AutonomousMission"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>Autonomous Unmanned Aircraft System</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Acceleration -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Acceleration">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
     </owl:Class>
     
 
@@ -1341,10 +1284,10 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#Adaptation -->
+    <!-- http://www.dronetology.net/dronetology#Advisory -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Adaptation">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Advisory">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
     </owl:Class>
     
 
@@ -1357,15 +1300,25 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#AirCraftComponent -->
+    <!-- http://www.dronetology.net/dronetology#AerialVehicle -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AirCraftComponent">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AerialVehicle">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#HardwareComponent"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasDirectPart"/>
+                        <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#EnergyReloadComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStation"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStationComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LaunchSystem"/>
-        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PilotlessAirCraft"/>
+        <rdfs:comment>Pilotless Aircraft</rdfs:comment>
     </owl:Class>
     
 
@@ -1374,6 +1327,26 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#AirSpaceVolume">
         <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#AirSpeed -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AirSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Speed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#AircraftComponent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AircraftComponent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#EnergyReloadComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStation"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStationComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LaunchSystem"/>
     </owl:Class>
     
 
@@ -1393,10 +1366,18 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#AlterCourse -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AlterCourse">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Projection"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#Antenna -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Antenna">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#CommunicationSystem"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#DataProcessingBoard"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#DataStorageDevice"/>
@@ -1423,15 +1404,23 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#AntiVibrationComponent -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#AntiVibrationComponent">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
     </owl:Class>
     
 
 
-    <!-- http://www.dronetology.net/dronetology#Autodiagnosis -->
+    <!-- http://www.dronetology.net/dronetology#AprioriRelationship -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Autodiagnosis">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#AprioriRelationship">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Authorization -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Authorization">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RegulationRequirements"/>
     </owl:Class>
     
 
@@ -1464,6 +1453,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#AuxiliaryComponent">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#DataLink"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#SoftwareComponent"/>
     </owl:Class>
     
 
@@ -1471,15 +1462,26 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#BVLOSMission -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#BVLOSMission">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Mission"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasElement"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#NoFlyZone"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://www.dronetology.net/dronetology#Basic -->
+    <!-- http://www.dronetology.net/dronetology#BarometricPressure -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Basic">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#BarometricPressure">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
     </owl:Class>
     
 
@@ -1498,6 +1500,15 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#BatteryAlarm">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Alarm"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#NoFlyZoneAlarm"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Beidou -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Beidou">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#GlobalNavigationSatelliteSystem"/>
+        <rdfs:comment>BeiDou, or BDS, is a global GNSS owned and operated by the People&apos;s Republic of China.</rdfs:comment>
     </owl:Class>
     
 
@@ -1546,6 +1557,14 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#Capacity -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Capacity">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#Catapult -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Catapult">
@@ -1563,10 +1582,12 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#ColaborativeConflict -->
+    <!-- http://www.dronetology.net/dronetology#CivilManufacturer -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ColaborativeConflict">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Conflict"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#CivilManufacturer">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Manufacturer"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#MilitaryManufacturer"/>
+        <rdfs:comment>Drone manufacturers of civil drones either produce drones for two types: commercial purposes (e.g. drones used in the energy, construction, agriculture or transport industry) and/or for private individuals for hobby flights.</rdfs:comment>
     </owl:Class>
     
 
@@ -1574,7 +1595,38 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#Collaboration -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Collaboration">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Collaborative -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Collaborative">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#CollaborativeConflict -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#CollaborativeConflict">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Collaborative"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Conflict"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Collision -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Collision">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Projection"/>
     </owl:Class>
     
 
@@ -1583,14 +1635,6 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#CollisionAlarm">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Alarm"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#CollisionAvoidance -->
-
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#CollisionAvoidance">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
     </owl:Class>
     
 
@@ -1627,10 +1671,25 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#CommunicationMessage -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#CommunicationMessage">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionPointElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#CommunicationSystem -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#CommunicationSystem">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#DataProcessingBoard"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#DataStorageDevice"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#EnergyStorageComponent"/>
@@ -1657,6 +1716,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Component">
         <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#Part"/>
+        <rdfs:comment>A part is a component of the artifact being designed.</rdfs:comment>
     </owl:Class>
     
 
@@ -1665,6 +1725,14 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#ComponentMalfunctionRisk">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Risk"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Comprehension -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Comprehension">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#SituationalAwareness"/>
     </owl:Class>
     
 
@@ -1698,14 +1766,25 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <!-- http://www.dronetology.net/dronetology#Constraint -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Constraint"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Constraint">
+        <rdfs:comment>Constraints form the leaves of the requirement decomposition tree,
+and embody physical laws, equations etc.</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- http://www.dronetology.net/dronetology#Cooperation -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Cooperation">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Cooperative -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Cooperative">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -1713,7 +1792,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#Coordination -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Coordination">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Relationship"/>
     </owl:Class>
     
 
@@ -1753,10 +1832,20 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#CruiseSpeed -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#CruiseSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Speed"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#DataLink -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#DataLink">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Component"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#SoftwareComponent"/>
     </owl:Class>
     
 
@@ -1764,7 +1853,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#DataProcessingBoard -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#DataProcessingBoard">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#DataStorageDevice"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#EnergyStorageComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Engine"/>
@@ -1795,7 +1884,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#DataStorageDevice -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#DataStorageDevice">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#EnergyStorageComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Engine"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FlightControllerUnit"/>
@@ -1829,6 +1918,14 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#Dimension -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Dimension">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#Direct_Remote_ID -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Direct_Remote_ID">
@@ -1837,20 +1934,40 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#Distance -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Distance">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#Drone -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Drone">
-        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#UA"/>
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
-        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+                    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#MannedAircraft"/>
     </owl:Class>
     
 
 
-    <!-- http://www.dronetology.net/dronetology#DroneRegulation -->
+    <!-- http://www.dronetology.net/dronetology#DualManufacturer -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#DroneRegulation"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#DualManufacturer">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Manufacturer"/>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#CivilManufacturer"/>
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MilitaryManufacturer"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment>Dual Use Drone Manufacturers, produce drones for commercial and military markets.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -1865,7 +1982,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#ElectronicSpeedController -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#ElectronicSpeedController">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
     </owl:Class>
     
@@ -1882,7 +1999,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#EnaireComplaince -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#EnaireComplaince">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#DroneRegulation"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Regulations"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1910,7 +2027,6 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStation"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStationComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LaunchSystem"/>
-        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PilotlessAirCraft"/>
     </owl:Class>
     
 
@@ -1918,7 +2034,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#EnergyStorageComponent -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#EnergyStorageComponent">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Engine"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FlightControllerUnit"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
@@ -1933,7 +2049,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#Engine -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Engine">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FlightControllerUnit"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#InertialNavigationComponent"/>
@@ -1944,16 +2060,52 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#EventuallyMissionRelationship -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#EventuallyMissionRelationship">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionRelationship"/>
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#EventuallyRelationship -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#EventuallyRelationship">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#ExternalSensor -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ExternalSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/SensingDevice"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#OnboardSensor"/>
+        <rdfs:comment>Sensors located outside the aircraft.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#Feature -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Feature"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Feature">
+        <rdfs:comment>Features are used to describe geometrical,
+functional and other characteristics associated with a part.</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- http://www.dronetology.net/dronetology#FixedWingCraft -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#FixedWingCraft">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasComponent"/>
@@ -1991,6 +2143,14 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#FlightAutonomy -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlightAutonomy">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#FlightControlApp -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlightControlApp">
@@ -2010,27 +2170,12 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#FlightControllerUnit -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlightControllerUnit">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FuselageComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#InertialNavigationComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#FlightPathVector -->
-
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlightPathVector">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasWaypoint"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#Waypoint"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2056,6 +2201,29 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a flightplan Is the union of the three subclasses</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FlightSegments -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlightSegments">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionObjectElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasWaypoint"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#Waypoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#FlightTime -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlightTime">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
     </owl:Class>
     
 
@@ -2113,14 +2281,16 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <!-- http://www.dronetology.net/dronetology#Function -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Function"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Function">
+        <rdfs:comment>Drones have many functions, ranging from monitoring climate change to carrying out search operations after natural disasters, photography, filming, etc.</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- http://www.dronetology.net/dronetology#FuselageComponent -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#FuselageComponent">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#InertialNavigationComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
@@ -2134,6 +2304,33 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#GCS">
         <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#GroundStation"/>
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#GLONASS -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#GLONASS">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#GlobalNavigationSatelliteSystem"/>
+        <rdfs:comment>GLONASS (Globalnaya Navigazionnaya Sputnikovaya Sistema, or Global Navigation Satellite System) is a global GNSS owned and operated by the Russian Federation. The fully operational system consists of 24+ satellites.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#GPS -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#GPS">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#GlobalNavigationSatelliteSystem"/>
+        <rdfs:comment>Global positioning system is a space-based navigation system owned by the US government and operated by the US Air Force that consists of satellites, receivers and other technologies that provide accurate location and time information for civil and military use.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Galileo -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Galileo">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#GlobalNavigationSatelliteSystem"/>
+        <rdfs:comment>Galileo is a global GNSS owned and operated by the European Union.</rdfs:comment>
     </owl:Class>
     
 
@@ -2153,6 +2350,16 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Geofence">
         <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#NoFlyZone"/>
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirSpaceVolume"/>
+        <rdfs:comment>Virtual geographic boundary to prevent drones from flying into specific areas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#GlobalNavigationSatelliteSystem -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#GlobalNavigationSatelliteSystem">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
+        <rdfs:comment>Global navigation satellite system (GNSS) is a general term describing any satellite constellation that provides positioning, navigation, and timing (PNT) services on a global or regional basis.</rdfs:comment>
     </owl:Class>
     
 
@@ -2179,7 +2386,6 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#GroundStationComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LaunchSystem"/>
-        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PilotlessAirCraft"/>
     </owl:Class>
     
 
@@ -2212,7 +2418,6 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#GroundStationComponent">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LaunchSystem"/>
-        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PilotlessAirCraft"/>
     </owl:Class>
     
 
@@ -2220,7 +2425,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#Group1 -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group1">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -2228,7 +2433,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#Group2 -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group2">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -2236,7 +2441,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#Group3 -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group3">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -2244,7 +2449,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#Group4 -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group4">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -2252,7 +2457,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#Group5 -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group5">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -2268,7 +2473,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#HALE -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#HALE">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -2283,6 +2488,38 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#Height -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Height">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#HighImpact -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#HighImpact">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RiskImpact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#HighLikelihood -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#HighLikelihood">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RiskLikelihood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#HighPriorityMission -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#HighPriorityMission">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionPriority"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#HomeLocation -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#HomeLocation">
@@ -2291,10 +2528,19 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#IRNSS -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#IRNSS">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#GlobalNavigationSatelliteSystem"/>
+        <rdfs:comment>IRNSS is a regional GNSS owned and operated by the Government of India. IRNSS is an autonomous system designed to cover the Indian region and 1500 km around the Indian mainland.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#InertialNavigationComponent -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#InertialNavigationComponent">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LandingComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
@@ -2321,7 +2567,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#LALE -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#LALE">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -2329,7 +2575,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#LASE -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#LASE">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -2337,7 +2583,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#LandingComponent -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#LandingComponent">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#LiftGeneratorComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
     </owl:Class>
@@ -2377,6 +2623,14 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#LandingSpeed -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LandingSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Speed"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#LandingWheel -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#LandingWheel">
@@ -2388,7 +2642,10 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#LargeUA -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#LargeUA">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#MediumUA"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#SmallUA"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#VerySmallUA"/>
     </owl:Class>
     
 
@@ -2397,7 +2654,14 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#LaunchSystem">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
-        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PilotlessAirCraft"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Li-ion -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Li-ion">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Battery"/>
     </owl:Class>
     
 
@@ -2405,7 +2669,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#LiftGeneratorComponent -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#LiftGeneratorComponent">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Payload"/>
     </owl:Class>
     
@@ -2427,10 +2691,34 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#LowImpact -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LowImpact">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RiskImpact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LowLikelihood -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LowLikelihood">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RiskLikelihood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#LowPriorityMission -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LowPriorityMission">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionPriority"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#MALE -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MALE">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -2438,7 +2726,23 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#MAV -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MAV">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MTOM -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MTOM">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MTOW -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MTOW">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
     </owl:Class>
     
 
@@ -2446,49 +2750,11 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#MannedAircraft -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MannedAircraft">
-        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#Manufacturer -->
-
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Manufacturer"/>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#MaxFlightAltitude -->
-
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MaxFlightAltitude">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#MaxFlightSpeed -->
-
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MaxFlightSpeed">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Requirement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#MediumUA -->
-
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MediumUA">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#Messages -->
-
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Messages">
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionPointElement"/>
-                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+                    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject"/>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -2496,18 +2762,151 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#MessagesReceived -->
+    <!-- http://www.dronetology.net/dronetology#Manufacturer -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MessagesReceived">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Messages"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Manufacturer">
+        <rdfs:comment></rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.dronetology.net/dronetology#MessagesSent -->
+    <!-- http://www.dronetology.net/dronetology#MaxCruiseSpeed -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MessagesSent">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Messages"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MaxCruiseSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#CruiseSpeed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MaxDimension -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MaxDimension">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MaxFlightAutonomy -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MaxFlightAutonomy">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#FlightAutonomy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MaxHeight -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MaxHeight">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Height"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MaxLandingSpeed -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MaxLandingSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#LandingSpeed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MaxMTOM -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MaxMTOM">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MTOM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MaxMTOW -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MaxMTOW">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MTOW"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MaxPayloadLiftCapacity -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MaxPayloadLiftCapacity">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#PayloadLiftCapacity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MaxRange -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MaxRange">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Range"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MaxVerticalTakeoffSpeed -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MaxVerticalTakeoffSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#VerticalTakeoffSpeed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MediumImpact -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MediumImpact">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RiskImpact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MediumLikelihood -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MediumLikelihood">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RiskLikelihood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MediumUA -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MediumUA">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Drone"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/hasUnit"/>
+                        <owl:someValuesFrom rdf:resource="https://qudt.org/vocab/unit/KiloM"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasParameter"/>
+                        <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#Weight"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart"/>
+                        <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#AerialVehicle"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/value"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100</owl:minCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://qudt.org/schema/qudt/value"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">500</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#SmallUA"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#VerySmallUA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MilitaryManufacturer -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MilitaryManufacturer">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Manufacturer"/>
+        <rdfs:comment>Manufacturers that focus exclusively towards military drones.</rdfs:comment>
     </owl:Class>
     
 
@@ -2516,20 +2915,22 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Mission">
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasElement"/>
-                <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasObjetive"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#MissionObjetive"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasElement"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#MissionPilot"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">only one mission can be stored in copter, is a multiple command sequence</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#MissionAdaptation -->
-
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionAdaptation">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionEventElement"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A drone mission is a flight planned or unplanned, with one or multiple objetives and a pilot.</rdfs:comment>
     </owl:Class>
     
 
@@ -2546,14 +2947,6 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#MissionCollaboration -->
-
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionCollaboration">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionEventElement"/>
     </owl:Class>
     
 
@@ -2601,6 +2994,21 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#MissionEventElement -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionEventElement">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionElement"/>
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionMode -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionMode">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
     </owl:Class>
     
@@ -2624,7 +3032,14 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#MissionObjetive -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionObjetive">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+                    <rdf:Description rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2656,6 +3071,30 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment>Mission elements located at a single location in coordinate space.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionPriority -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionPriority">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionRelationship -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionRelationship">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Relationship"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2663,6 +3102,22 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#MissionRisk -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionRisk">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionSensorData -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionSensorData">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionEventElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#MissionStatus -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionStatus">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
     </owl:Class>
     
@@ -2695,6 +3150,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#NoFlyZone">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirSpaceVolume"/>
+        <rdfs:comment>Virtual geographic boundary to prevent drones from flying into specific areas.</rdfs:comment>
     </owl:Class>
     
 
@@ -2743,8 +3199,9 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#OnboardSensor -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#OnboardSensor">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/SensingDevice"/>
+        <rdfs:comment>Sensors integrated in the aircraft or carried as part of the drone payload.</rdfs:comment>
     </owl:Class>
     
 
@@ -2781,8 +3238,16 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#Payload -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Payload">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#PowerDistributionBoard"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#PayloadLiftCapacity -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#PayloadLiftCapacity">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
     </owl:Class>
     
 
@@ -2815,7 +3280,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#Perception -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Perception">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Function"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#SituationalAwareness"/>
     </owl:Class>
     
 
@@ -2851,17 +3316,18 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#PilotlessAirCraft -->
+    <!-- http://www.dronetology.net/dronetology#PilotLicence -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#PilotlessAirCraft">
-        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#UAV"/>
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasDirectPart"/>
-                <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#PilotLicence">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RegulationRequirements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Pitch -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Pitch">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
     </owl:Class>
     
 
@@ -2877,14 +3343,30 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#PowerDistributionBoard -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#PowerDistributionBoard">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirCraftComponent"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AircraftComponent"/>
     </owl:Class>
     
 
 
     <!-- http://www.dronetology.net/dronetology#Product -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Product"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Product">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#isProductOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Drone Model</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Projection -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Projection">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#SituationalAwareness"/>
+    </owl:Class>
     
 
 
@@ -2914,10 +3396,19 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#QZSS -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#QZSS">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#GlobalNavigationSatelliteSystem"/>
+        <rdfs:comment>QZSS is a regional GNSS owned by the Government of Japan and operated by QZS System Service Inc. (QSS). QZSS complements GPS to improve coverage in East Asia and Oceania.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#RPA -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#RPA">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:subClassOf></rdfs:subClassOf>
     </owl:Class>
     
@@ -2927,6 +3418,30 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#RPAS">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RPA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#RainFall -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RainFall">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Range -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Range">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Received -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Received">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#CommunicationMessage"/>
     </owl:Class>
     
 
@@ -2947,6 +3462,26 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#RegulationRequirements -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RegulationRequirements"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Regulations -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Regulations">
+        <rdfs:comment>Regulation of unmanned aerial vehicles (UAVs) involves setting safety requirements, outlining regulations for the safe flying of drones, and enforcing action against errant users.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Relationship -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Relationship"/>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#RemoteGuided -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#RemoteGuided">
@@ -2955,23 +3490,6 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasElement"/>
                 <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#FlightPlan"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#isMissionOf"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Drone"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasComponent"/>
-                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                                <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#DataLink"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2993,9 +3511,19 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#RemoteId -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RemoteId">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Received"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#RemoteIdentification -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RemoteIdentification"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RemoteIdentification">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RegulationRequirements"/>
+    </owl:Class>
     
 
 
@@ -3007,27 +3535,17 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#RemoteSensor -->
-
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RemoteSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/SensingDevice"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.dronetology.net/dronetology#Requirement -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Requirement">
-        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#Specification"/>
+        <rdfs:comment>Requirements specify the properties (functional, structural, physical, etc.) of the artifact being designed.</rdfs:comment>
     </owl:Class>
     
 
 
     <!-- http://www.dronetology.net/dronetology#Risk -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Risk">
-        <owl:equivalentClass rdf:resource="http://www.dronetology.net/dronetology#Threat"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Risk"/>
     
 
 
@@ -3040,6 +3558,14 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#RiskLikelihood -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#RiskLikelihood"/>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Roll -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Roll">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
     
 
 
@@ -3074,10 +3600,18 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#Runway -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Runway">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#STOLCraft -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#STOLCraft">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#VTOLCraft"/>
     </owl:Class>
     
@@ -3091,6 +3625,14 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#Sent -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Sent">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#CommunicationMessage"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#SimulatedTelemetry -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#SimulatedTelemetry">
@@ -3099,10 +3641,17 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#SituationalAwareness -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#SituationalAwareness"/>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#SmallUA -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#SmallUA">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#VerySmallUA"/>
     </owl:Class>
     
 
@@ -3115,22 +3664,27 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#Specification -->
+    <!-- http://www.dronetology.net/dronetology#Speed -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Specification"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Speed">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#StallSpeed -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#StallSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Speed"/>
+        <rdfs:comment>Stall speed refers to the minimum speed at which an airplane must fly to produce lift.</rdfs:comment>
+    </owl:Class>
     
 
 
     <!-- http://www.dronetology.net/dronetology#Swarm -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Swarm">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasDrone"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:comment>Drone swarm allow groups of drones to coordinate with each other, often without direct human control.</rdfs:comment>
     </owl:Class>
     
 
@@ -3166,9 +3720,11 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#Threat -->
+    <!-- http://www.dronetology.net/dronetology#Temperature -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Threat"/>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Temperature">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
     
 
 
@@ -3183,7 +3739,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#UA -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#UA">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -3191,7 +3747,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#UAS -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#UAS">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasComponent"/>
@@ -3213,8 +3769,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#UAV -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#UAV">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#HardwareComponent"/>
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -3238,7 +3793,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#VALE -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#VALE">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -3254,7 +3809,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#VTOLCraft -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#VTOLCraft">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -3263,6 +3818,14 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#VerticalTakeOffLandingMission">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#VerticalTakeoffSpeed -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#VerticalTakeoffSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Speed"/>
     </owl:Class>
     
 
@@ -3278,22 +3841,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#VerySmallUA -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#VerySmallUA">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasWeight"/>
-                <owl:someValuesFrom>
-                    <rdfs:Datatype>
-                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-                        <owl:withRestrictions rdf:parseType="Collection">
-                            <rdf:Description>
-                                <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">250.0</xsd:maxExclusive>
-                            </rdf:Description>
-                        </owl:withRestrictions>
-                    </rdfs:Datatype>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
     </owl:Class>
     
 
@@ -3315,6 +3863,22 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
                 <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#DataStorageDevice"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Visibility -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Visibility">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#Waiver -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Waiver">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RegulationRequirements"/>
     </owl:Class>
     
 
@@ -3353,7 +3917,14 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#WeatherReport -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#WeatherReport">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionObjectElement"/>
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3361,7 +3932,15 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#Weight -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Weight">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Parameter"/>
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#WindSpeed -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#WindSpeed">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Speed"/>
     </owl:Class>
     
 
@@ -3388,10 +3967,28 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.dronetology.net/dronetology#Yaw -->
+
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Yaw">
+        <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.dronetology.net/dronetology#eVTOL -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#eVTOL">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.dronetology.net/dronetology#VTOLCraft"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasPart"/>
+                        <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#ElectricalEngine"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3399,22 +3996,20 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#DroneRegulation_(EU)_2019/945 -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#DroneRegulation_(EU)_2019/945">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#DroneRegulation"/>
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Regulations"/>
     </owl:Class>
     
 
 
-    <!-- http://www.dronetology.net/dronetology#UA+AO -->
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#UA+AO">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#UA"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.dronetology.net/dronetology#hasMission"/>
-                <owl:someValuesFrom rdf:resource="http://www.dronetology.net/dronetology#AutonomousMission"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
     
 
 
@@ -3454,6 +4049,18 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval"/>
+    
+
+
     <!-- http://www.w3.org/2006/time#TemporalEntity -->
 
     <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity"/>
@@ -3466,6 +4073,47 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
+    <!-- https://qudt.org/vocab/unit/KiloM -->
+
+    <owl:Class rdf:about="https://qudt.org/vocab/unit/KiloM"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.dronetology.net/dronetology#DronetologyLicenseTerms -->
+
+    <owl:NamedIndividual rdf:about="http://www.dronetology.net/dronetology#DronetologyLicenseTerms">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/LicenseDocument"/>
+        <dc:description>Release Terms, Information, and Acknowledgments
+Dronetology: the UAS domain ontology
+
+Dronetology was developed as a key component of a semantic data integration system built to support integration, query, and search over multiple sources of heterogeneous UAS data.
+
+Dronetology serves as the backbone upon which to overlay data from multiple sources. 
+
+Dronetology incorporates data (provided under any applicable distribution terms and conditions) from the following sources, and we gratefully acknowledges their contribution:
+
+THE DATA IS PROVIDED &quot;AS IS&quot; WITHOUT ANY WARRANTY OF ANY KIND, EITHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO, ANY WARRANTY THAT THE DATA WILL CONFORM TO SPECIFICATIONS, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, FREEDOM FROM INFRINGEMENT, OR ANY WARRANTY THAT THE DATA WILL BE ERROR FREE OR ANY WARRANTY THAT RELATED DOCUMENTATION/RELEASE NOTES WILL CONFORM TO THE DATA PROVIDED.  NASA HAS NEITHER VERIFIED NOR VALIDATED THIRD PARTY DATA, WHICH IS PROVIDED SOLELY FOR THE PURPOSE OF ILLUSTRATING USE OF THE ONTOLOGY.  IN NO EVENT SHALL THE U.S. GOVERNMENT BE LIABLE FOR ANY DAMAGES, INCLUDING BUT NOT LIMITED TO, DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES, ARISING OUT OF OR RESULTING FROM OR IN ANY WAY CONNECTED WITH THIS DATA.  YOU ARE PUT ON NOTICE THAT EXPORT OF ANY GOODS OR TECHNICAL DATA FROM THE UNITED STATES MAY REQUIRE SOME FORM OF EXPORT LICENSE FROM THE U.S. GOVERNMENT BEFORE THEY ARE EITHER SENT OUTSIDE OF THE UNITED STATES OR MADE AVAILABLE TO NATIONALS OF A FOREIGN COUNTRY EITHER WITHIN THE UNITED STATES OR ABROAD.  FAILURE TO OBTAIN NECESSARY EXPORT LICENSES MAY RESULT IN CRIMINAL LIABILITY UNDER U.S. LAWS.  NASA NEITHER REPRESENTS THAT A LICENSE SHALL NOT BE REQUIRED NOR THAT, IF REQUIRED, IT SHALL BE ISSUED.  THE DATA, AND/OR ANY MODIFIED OR ENHANCED VERSION THEREOF, SHALL NOT BE OFFERED FOR SALE TO THE U.S. GOVERNMENT OR ANY OTHER ENTITY. NASA SHALL BE NEITHER LIABLE NOR RESPONSIBLE FOR ANY MAINTENANCE OR UPDATING OF THE DATA, NOR FOR CORRECTION OF ANY ERRORS IN THE DATA.</dc:description>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100</owl:minCardinality>
+    </rdf:Description>
+    <rdf:Description>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">500</owl:maxCardinality>
+    </rdf:Description>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -3474,6 +4122,17 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Beidou"/>
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#GLONASS"/>
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#GPS"/>
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#Galileo"/>
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#IRNSS"/>
+            <rdf:Description rdf:about="http://www.dronetology.net/dronetology#QZSS"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
@@ -3498,5 +4157,5 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
