@@ -1868,7 +1868,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#AA">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RPA"/>
-        <rdfs:subClassOf xml:lang="en">AA. Autonomous Aircraft</rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">AA. Autonomous Aircraft</rdfs:comment>
+        <rdfs:label xml:lang="en">AA</rdfs:label>
     </owl:Class>
     
 
@@ -1878,6 +1879,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#AAS">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AA"/>
         <rdfs:comment xml:lang="en">AAS. Autonomous Aerial System</rdfs:comment>
+        <rdfs:label xml:lang="en">AAS</rdfs:label>
     </owl:Class>
     
 
@@ -1908,6 +1910,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment>Autonomous Unmanned Aircraft System</rdfs:comment>
+        <rdfs:label xml:lang="en">AUAS</rdfs:label>
     </owl:Class>
     
 
@@ -2120,6 +2123,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RemoteGuided"/>
+        <rdfs:comment xml:lang="en">AutonomousMission. A mission performed independently, without direct pilot involvement.</rdfs:comment>
+        <rdfs:label xml:lang="en">AutonomousMission</rdfs:label>
     </owl:Class>
     
 
@@ -2169,6 +2174,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">BVLOSMission. A mission beyond the visual line of sight of the pilot.</rdfs:comment>
+        <rdfs:label xml:lang="en">BVLOSMission</rdfs:label>
     </owl:Class>
     
 
@@ -2336,6 +2343,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#CollaborativeDrone">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">CollaborativeDrone. Drone with specific equipment that allows to collaborate with others.</rdfs:comment>
+        <rdfs:label xml:lang="en">CollaborativeDrone</rdfs:label>
     </owl:Class>
     
 
@@ -2472,6 +2480,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#CooperativeDrone">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">CooperativeDrone. Drone with equipment that allows to cooperate with others.</rdfs:comment>
+        <rdfs:label xml:lang="en">CooperativeDrone</rdfs:label>
     </owl:Class>
     
 
@@ -2489,6 +2498,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#FixedWingCraft"/>
         <rdfs:comment xml:lang="en">Copter. A type of aircraft which derives both lift and propulsion from one or more sets of horizontally revolving overhead rotors.</rdfs:comment>
+        <rdfs:label xml:lang="en">Copter</rdfs:label>
     </owl:Class>
     
 
@@ -2685,6 +2695,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#EmergencyMission">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:comment xml:lang="en">EmergencyMission. A mission with high priority.</rdfs:comment>
+        <rdfs:label xml:lang="en">EmergencyMission</rdfs:label>
     </owl:Class>
     
 
@@ -2764,6 +2776,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">FixedWingCraft. An aircraft with wings that stay in the same position.</rdfs:comment>
+        <rdfs:label xml:lang="en">FixedWingCraft</rdfs:label>
     </owl:Class>
     
 
@@ -2774,6 +2787,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#FixedWingCraft"/>
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#VTOLCraft"/>
         <rdfs:comment xml:lang="en">FixedWingVTOLCraft. An aircraft with wings that stay in the same position but can take off and land vertically without relying on a runway.</rdfs:comment>
+        <rdfs:label xml:lang="en">FixedWingVTOLCraft</rdfs:label>
     </owl:Class>
     
 
@@ -2792,6 +2806,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#FlightAreaMission">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:comment xml:lang="en">FlightAreaMission. A mission defined by a fligh area.</rdfs:comment>
+        <rdfs:label xml:lang="en">FlightAreaMission</rdfs:label>
     </owl:Class>
     
 
@@ -2868,6 +2884,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">FlightSegments. The fly path between two wayopints.</rdfs:comment>
+        <rdfs:label xml:lang="en">FlightSegments</rdfs:label>
     </owl:Class>
     
 
@@ -3083,6 +3100,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group1">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">Group1. A drone-category for small drone defined by the U.S. Department of Defense (DoD).</rdfs:comment>
+        <rdfs:label xml:lang="en">Group1</rdfs:label>
     </owl:Class>
     
 
@@ -3092,6 +3110,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group2">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">Group2. A drone-category for medium drone defined by the U.S. Department of Defense (DoD).</rdfs:comment>
+        <rdfs:label xml:lang="en">Group2</rdfs:label>
     </owl:Class>
     
 
@@ -3101,6 +3120,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group3">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">Group3. A drone-category for large drone defined by the U.S. Department of Defense (DoD).</rdfs:comment>
+        <rdfs:label xml:lang="en">Group3</rdfs:label>
     </owl:Class>
     
 
@@ -3110,6 +3130,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group4">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">Group4. A drone-category for larger drone defined by the U.S. Department of Defense (DoD).</rdfs:comment>
+        <rdfs:label xml:lang="en">Group4</rdfs:label>
     </owl:Class>
     
 
@@ -3119,6 +3140,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Group5">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">Group5. A drone-category for the largest drone defined by the U.S. Department of Defense (DoD).</rdfs:comment>
+        <rdfs:label xml:lang="en">Group5</rdfs:label>
     </owl:Class>
     
 
@@ -3138,6 +3160,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#HALE">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">HALE. High-Altitude Long Endurance drone.</rdfs:comment>
+        <rdfs:label xml:lang="en">HALE</rdfs:label>
     </owl:Class>
     
 
@@ -3189,6 +3212,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#HighPriorityMission">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionPriority"/>
         <rdfs:comment xml:lang="en">HighPriorityMission. Immediate mission that takes precedence over others.</rdfs:comment>
+        <rdfs:label xml:lang="en">HighPriorityMission</rdfs:label>
     </owl:Class>
     
 
@@ -3269,6 +3293,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#LALE">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">LALE. Low Altitude Large Endurance drone.</rdfs:comment>
+        <rdfs:label xml:lang="en">LALE</rdfs:label>
     </owl:Class>
     
 
@@ -3278,6 +3303,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#LASE">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">LASE. Low Altitude Short Endurance drone.</rdfs:comment>
+        <rdfs:label xml:lang="en">LASE</rdfs:label>
     </owl:Class>
     
 
@@ -3343,6 +3369,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#SmallUA"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#VerySmallUA"/>
         <rdfs:comment xml:lang="en">LargeUA. Unmmaned aircraft with a wingspan greater than 10 m.</rdfs:comment>
+        <rdfs:label xml:lang="en">LargeUA</rdfs:label>
     </owl:Class>
     
 
@@ -3423,6 +3450,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#LowPriorityMission">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionPriority"/>
         <rdfs:comment xml:lang="en">LowPriorityMission. Mission without any precedence.</rdfs:comment>
+        <rdfs:label xml:lang="en">LowPriorityMission</rdfs:label>
     </owl:Class>
     
 
@@ -3432,6 +3460,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MALE">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">MALE. Medium Altitude Long Endurance drone.</rdfs:comment>
+        <rdfs:label xml:lang="en">MALE</rdfs:label>
     </owl:Class>
     
 
@@ -3441,6 +3470,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MAV">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">MAV. Micro Air Vehicle. Unmanned aircraft bellow 2 kg of weight.</rdfs:comment>
+        <rdfs:label xml:lang="en">MAV</rdfs:label>
     </owl:Class>
     
 
@@ -3577,9 +3607,11 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#MediumUA -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MediumUA">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#SmallUA"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#VerySmallUA"/>
         <rdfs:comment xml:lang="en">MediumUA. Unmanned aircraft with a wingspan of about 5-10 m that can carry payloads of 100 to 200 kg.</rdfs:comment>
+        <rdfs:label xml:lang="en">MediumUA</rdfs:label>
     </owl:Class>
     
 
@@ -3634,6 +3666,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Mission. A drone mission is a flight planned or unplanned, with one or multiple objetives and a pilot.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mission</rdfs:label>
     </owl:Class>
     
 
@@ -3687,6 +3720,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">MissionCommand. A flight command assigned to a mission.</rdfs:comment>
+        <rdfs:label xml:lang="en">MissionCommand</rdfs:label>
     </owl:Class>
     
 
@@ -3715,6 +3750,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">MissionCommunicationMessage. A communication message received or transmitted during a mission.</rdfs:comment>
+        <rdfs:label xml:lang="en">MissionCommunicationMessage</rdfs:label>
     </owl:Class>
     
 
@@ -3724,6 +3760,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionComplaince">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
         <rdfs:comment xml:lang="en">MissionCompliance. Any compliance regulation that may affect the UAS mission.</rdfs:comment>
+        <rdfs:label xml:lang="en">MissionCompliance</rdfs:label>
     </owl:Class>
     
 
@@ -3750,6 +3787,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionElement">
         <rdfs:comment xml:lang="en">MissionElement. Any related UAS mission element, like an time interval, a point, etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">MissionElement</rdfs:label>
     </owl:Class>
     
 
@@ -3793,6 +3831,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionFlightPlan">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionTemporalElement"/>
+        <rdfs:comment xml:lang="en">MissionFlightPlan. A fligh plan assigned to a drone mission.</rdfs:comment>
+        <rdfs:label xml:lang="en">MissionFlightPlan</rdfs:label>
     </owl:Class>
     
 
@@ -3808,7 +3848,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">FlightTrack. A sequence of locations of the aircraft during a mission.</rdfs:comment>
+        <rdfs:comment xml:lang="en">MissionFlightTrack. A sequence of locations of the aircraft during a mission.</rdfs:comment>
+        <rdfs:label xml:lang="en">MissionFlightTrack</rdfs:label>
     </owl:Class>
     
 
@@ -3818,6 +3859,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionGeometryElement">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
         <rdfs:comment xml:lang="en">MissionGeometryElement. Any mission element that have a geometry.</rdfs:comment>
+        <rdfs:label xml:lang="en">MissionGeometryElement</rdfs:label>
     </owl:Class>
     
 
@@ -3827,6 +3869,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionGeometryPointElement">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
         <rdfs:comment xml:lang="en">MissionGeometryPointElement. A mission element located at a single location in a defined coordinate space.</rdfs:comment>
+        <rdfs:label xml:lang="en">MissionGeometryPointElement</rdfs:label>
     </owl:Class>
     
 
@@ -3846,6 +3889,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionMode">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
         <rdfs:comment xml:lang="en">MissionMode. Defines the way the vehicle execute a mission.</rdfs:comment>
+        <rdfs:label xml:lang="en">MissionMode</rdfs:label>
     </owl:Class>
     
 
@@ -3908,6 +3952,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionPriority">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
         <rdfs:comment xml:lang="en">MissionPriority. Stablish the fact or condition of a mission being regarded or treated as more important than others.</rdfs:comment>
+        <rdfs:label xml:lang="en">MissionPriority</rdfs:label>
     </owl:Class>
     
 
@@ -3962,6 +4007,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#MissionStatus">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionElement"/>
         <rdfs:comment xml:lang="en">MissionStatus. The situation of a UAS mission at a particular time during a process.</rdfs:comment>
+        <rdfs:label xml:lang="en">MissionStatus</rdfs:label>
     </owl:Class>
     
 
@@ -3988,6 +4034,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">MissionWeatherReport. A weather report related to a UAS mission</rdfs:comment>
+        <rdfs:label xml:lang="en">MissionWeatherReport</rdfs:label>
     </owl:Class>
     
 
@@ -4091,10 +4138,12 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#PartialAutonomous -->
+    <!-- http://www.dronetology.net/dronetology#PartialAutonomousMission -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#PartialAutonomous">
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#PartialAutonomousMission">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:comment xml:lang="en">PartialAutonomousMission. A mission with parts that do not require a pilot.</rdfs:comment>
+        <rdfs:label xml:lang="en">PartialAutonomousMission</rdfs:label>
     </owl:Class>
     
 
@@ -4161,6 +4210,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#Video"/>
         <rdfs:comment xml:lang="en">Photograph. A picture made using a camera installed as payload of the UAS during a mission.</rdfs:comment>
+        <rdfs:label xml:lang="en">Photograph</rdfs:label>
     </owl:Class>
     
 
@@ -4209,6 +4259,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#PlannedMission">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:comment xml:lang="en">PlannedMission. A mission with a planned fligh.</rdfs:comment>
+        <rdfs:label xml:lang="en">PlannedMission</rdfs:label>
     </owl:Class>
     
 
@@ -4264,7 +4316,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#RPA">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">RPA. Remotely piloted aircraft.</rdfs:comment>
-        <rdfs:subClassOf></rdfs:subClassOf>
+        <rdfs:label xml:lang="en">RPA</rdfs:label>
     </owl:Class>
     
 
@@ -4274,6 +4326,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#RPAS">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RPA"/>
         <rdfs:comment xml:lang="en">RPAS. Remotely piloted aircraft system.</rdfs:comment>
+        <rdfs:label xml:lang="en">RPAS</rdfs:label>
     </owl:Class>
     
 
@@ -4352,6 +4405,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
                 <owl:onClass rdf:resource="http://www.dronetology.net/dronetology#Pilot"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">RemoteGuided. A mission guided remotely by a pilot.</rdfs:comment>
+        <rdfs:label xml:lang="en">RemotedGuided</rdfs:label>
     </owl:Class>
     
 
@@ -4484,6 +4539,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#VTOLCraft"/>
         <rdfs:comment xml:lang="en">STOLCraft. A short takeoff and landing (STOL) aircraft is a conventional fixed-wing aircraft that has short runway requirements for takeoff and landing.</rdfs:comment>
+        <rdfs:label xml:lang="en">STOLCraft</rdfs:label>
     </owl:Class>
     
 
@@ -4502,6 +4558,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#SensorHarvestingMission">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:comment xml:lang="en">SensorHarvestingMission. Mission that harvest data from sensors using the dorne as a sink data.</rdfs:comment>
+        <rdfs:label xml:lang="en">SensorHarvestingMission</rdfs:label>
     </owl:Class>
     
 
@@ -4510,6 +4568,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#SimulatedTelemetry">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Telemetry"/>
+        <rdfs:comment xml:lang="en">SimulatedTelemetry. Telemetry generated by a drone simulator.</rdfs:comment>
+        <rdfs:label xml:lang="en">SimulatedTelemetry</rdfs:label>
     </owl:Class>
     
 
@@ -4529,6 +4589,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#VerySmallUA"/>
         <rdfs:comment xml:lang="en">SmallUA. Unmanned aircraft that have at least one dimension greater than 50 cm and no larger than 2 meters.</rdfs:comment>
+        <rdfs:label xml:lang="en">SmallUA</rdfs:label>
     </owl:Class>
     
 
@@ -4615,6 +4676,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Telemetry. Data gathered about the aircraft and its surroundings that is sent back to the operator or ground control station during a mission.</rdfs:comment>
+        <rdfs:label xml:lang="en">Telemetry</rdfs:label>
     </owl:Class>
     
 
@@ -4624,6 +4686,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#TiltRotorCraft">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#FixedWingVTOLCraft"/>
         <rdfs:comment xml:lang="en">TiltRotorCraft. Aircraft that convert from vertical to horizontal flight by rotating propellers or ducted fans from horizontal positions like conventional aircraft propellers to vertical like a helicopter&apos;s rotors.</rdfs:comment>
+        <rdfs:label xml:lang="en">TiltRotorCraft</rdfs:label>
     </owl:Class>
     
 
@@ -4633,6 +4696,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#TiltWingCraft">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#FixedWingVTOLCraft"/>
         <rdfs:comment xml:lang="en">TiltWingCraft. A tiltwing aircraft features a wing that is horizontal for conventional forward flight and rotates up for vertical takeoff and landing.</rdfs:comment>
+        <rdfs:label xml:lang="en">TiltWingCraft</rdfs:label>
     </owl:Class>
     
 
@@ -4652,6 +4716,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#UA">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">UA. Unmanned aircraft.</rdfs:comment>
+        <rdfs:label xml:lang="en">UA</rdfs:label>
     </owl:Class>
     
 
@@ -4675,6 +4740,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">UAS. Unmanned aircraft system (UAS) means an unmanned aircraft and the equipment to control it remotely.</rdfs:comment>
+        <rdfs:label xml:lang="en">UAS</rdfs:label>
     </owl:Class>
     
 
@@ -4684,6 +4750,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#UAV">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">UAV. An unmanned aerial vehicle (UAV) is a powered, aerial vehicle that does not carry a human pilot.</rdfs:comment>
+        <rdfs:label xml:lang="en">UAV</rdfs:label>
     </owl:Class>
     
 
@@ -4702,6 +4769,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#VLOSMission">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:comment xml:lang="en">VLOSMission. Mission in the visual line of sight of the pilot.</rdfs:comment>
+        <rdfs:label xml:lang="en">VLOSMission</rdfs:label>
     </owl:Class>
     
 
@@ -4711,6 +4780,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#VTOLCraft">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">VTOLCraft. Any aircraft that can take off and land vertically without relying on a runway.</rdfs:comment>
+        <rdfs:label xml:lang="en">VTOLCraft</rdfs:label>
     </owl:Class>
     
 
@@ -4719,6 +4789,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#VerticalTakeOffLandingMission">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:comment xml:lang="en">VerticalTakeOffLandingMission. Mission defined using vertical takeoff and anding.</rdfs:comment>
+        <rdfs:label xml:lang="en">VerticalTakeOffLandingMission</rdfs:label>
     </owl:Class>
     
 
@@ -4748,6 +4820,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#VerySmallUA">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:comment xml:lang="en">VerySmallUA. Unmanned aircraft with size of a large insect to 30-50 cm long.</rdfs:comment>
+        <rdfs:label xml:lang="en">VerySmallUA</rdfs:label>
     </owl:Class>
     
 
@@ -4770,6 +4843,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Video. A recording of moving visual images made digitally using an onboard camera during a mission.</rdfs:comment>
+        <rdfs:label xml:lang="en">Video</rdfs:label>
     </owl:Class>
     
 
@@ -4799,6 +4873,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#Waypoint">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MissionGeometryPointElement"/>
         <rdfs:comment xml:lang="en">Waypoint. Points predefined on the map by the pilot or a planning software that define the UAS flight during a mission.</rdfs:comment>
+        <rdfs:label xml:lang="en">Waypoint</rdfs:label>
     </owl:Class>
     
 
@@ -4807,6 +4882,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#WaypointMission">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Mission"/>
+        <rdfs:comment xml:lang="en">WaypointMission. A mission defined using waypoints.</rdfs:comment>
+        <rdfs:label xml:lang="en">WaypointMission</rdfs:label>
     </owl:Class>
     
 
@@ -4921,6 +4998,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">eVTOL. An electric Vertical Take-Off and Landing aircraft.</rdfs:comment>
+        <rdfs:label xml:lang="en">eVTOL</rdfs:label>
     </owl:Class>
     
 
@@ -4933,9 +5011,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <!-- http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal -->
 
-    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal">
-        <rdfs:comment xml:lang="en">A goal is a stated result or specific aim that an individual or team works toward.</rdfs:comment>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Goal"/>
     
 
 
@@ -5039,9 +5115,11 @@ Dronetology was developed as a key component of a semantic data integration syst
 
 Dronetology serves as the backbone upon which to overlay data from multiple sources. 
 
-Dronetology incorporates data (provided under any applicable distribution terms and conditions) from the following sources, and we gratefully acknowledges their contribution:
+Dronetology incorporates data (provided under any applicable distribution terms and conditions) from the following sources, and we gratefully acknowledges their contribution: Fuvex, NASA, Enaire.
 
-THE DATA IS PROVIDED &quot;AS IS&quot; WITHOUT ANY WARRANTY OF ANY KIND, EITHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO, ANY WARRANTY THAT THE DATA WILL CONFORM TO SPECIFICATIONS, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, FREEDOM FROM INFRINGEMENT, OR ANY WARRANTY THAT THE DATA WILL BE ERROR FREE OR ANY WARRANTY THAT RELATED DOCUMENTATION/RELEASE NOTES WILL CONFORM TO THE DATA PROVIDED.  NASA HAS NEITHER VERIFIED NOR VALIDATED THIRD PARTY DATA, WHICH IS PROVIDED SOLELY FOR THE PURPOSE OF ILLUSTRATING USE OF THE ONTOLOGY.  IN NO EVENT SHALL THE U.S. GOVERNMENT BE LIABLE FOR ANY DAMAGES, INCLUDING BUT NOT LIMITED TO, DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES, ARISING OUT OF OR RESULTING FROM OR IN ANY WAY CONNECTED WITH THIS DATA.  YOU ARE PUT ON NOTICE THAT EXPORT OF ANY GOODS OR TECHNICAL DATA FROM THE UNITED STATES MAY REQUIRE SOME FORM OF EXPORT LICENSE FROM THE U.S. GOVERNMENT BEFORE THEY ARE EITHER SENT OUTSIDE OF THE UNITED STATES OR MADE AVAILABLE TO NATIONALS OF A FOREIGN COUNTRY EITHER WITHIN THE UNITED STATES OR ABROAD.  FAILURE TO OBTAIN NECESSARY EXPORT LICENSES MAY RESULT IN CRIMINAL LIABILITY UNDER U.S. LAWS.  NASA NEITHER REPRESENTS THAT A LICENSE SHALL NOT BE REQUIRED NOR THAT, IF REQUIRED, IT SHALL BE ISSUED.  THE DATA, AND/OR ANY MODIFIED OR ENHANCED VERSION THEREOF, SHALL NOT BE OFFERED FOR SALE TO THE U.S. GOVERNMENT OR ANY OTHER ENTITY. NASA SHALL BE NEITHER LIABLE NOR RESPONSIBLE FOR ANY MAINTENANCE OR UPDATING OF THE DATA, NOR FOR CORRECTION OF ANY ERRORS IN THE DATA.</dc:description>
+THE DATA IS PROVIDED &quot;AS IS&quot; WITHOUT ANY WARRANTY OF ANY KIND, EITHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO, ANY WARRANTY THAT THE DATA WILL CONFORM TO SPECIFICATIONS, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, FREEDOM FROM INFRINGEMENT, OR ANY WARRANTY THAT THE DATA WILL BE ERROR FREE OR ANY WARRANTY THAT RELATED DOCUMENTATION/RELEASE NOTES WILL CONFORM TO THE DATA PROVIDED. 
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY DAMAGES, INCLUDING BUT NOT LIMITED TO, DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES, ARISING OUT OF OR RESULTING FROM OR IN ANY WAY CONNECTED WITH THIS DATA.  
+</dc:description>
     </owl:NamedIndividual>
     <rdf:Description>
         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100</owl:minCardinality>
