@@ -954,6 +954,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
         <rdfs:subPropertyOf rdf:resource="http://www.dronetology.net/dronetology#isRelationshipOf"/>
         <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
         <rdfs:range rdf:resource="http://www.dronetology.net/dronetology#Drone"/>
+        <rdfs:comment xml:lang="en">isAPrioriRelationshipOf. Relates two drones with a relaton defined before the mission start.</rdfs:comment>
+        <rdfs:label xml:lang="en">isAPrioriRelationshipOf</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1715,7 +1717,6 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://www.dronetology.net/dronetology#hasImpact -->
 
     <owl:DatatypeProperty rdf:about="http://www.dronetology.net/dronetology#hasImpact">
-        <rdfs:domain rdf:resource="http://www.dronetology.net/dronetology#Risk"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
@@ -1760,6 +1761,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
                 </owl:withRestrictions>
             </rdfs:Datatype>
         </rdfs:range>
+        <rdfs:comment xml:lang="en">hasProbability. Provides the probability of a risk</rdfs:comment>
+        <rdfs:label xml:lang="en">hasProbability</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1899,7 +1902,7 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     <!-- http://purl.org/dc/terms/LicenseDocument -->
 
     <owl:Class rdf:about="http://purl.org/dc/terms/LicenseDocument">
-        <rdfs:comment xml:lang="en">LicenseDocument</rdfs:comment>
+        <rdfs:comment xml:lang="en">LicenseDocument. Used for defining licence terms</rdfs:comment>
         <rdfs:label xml:lang="en">LicenseDocument</rdfs:label>
     </owl:Class>
     
@@ -1948,13 +1951,13 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#ADSB -->
+    <!-- http://www.dronetology.net/dronetology#ADSBMessage -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ADSB">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MessageReceived"/>
-        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RemoteId"/>
-        <rdfs:isDefinedBy xml:lang="en">ADSB. Messages received from an ADSB Automatic Dependent Surveillance Broadcast transponder.</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">ADSB</rdfs:label>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#ADSBMessage">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#CommunicationMessage"/>
+        <owl:disjointWith rdf:resource="http://www.dronetology.net/dronetology#RemoteIDMessage"/>
+        <rdfs:isDefinedBy xml:lang="en">ADSBMessage. Message received from an ADSB Automatic Dependent Surveillance Broadcast transponder.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">ADSBMessage</rdfs:label>
     </owl:Class>
     
 
@@ -2313,16 +2316,6 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#Broadcast_Remote_ID -->
-
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Broadcast_Remote_ID">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RemoteID"/>
-        <rdfs:comment xml:lang="en">Broadcast_Remote_ID. RemoteID transmitted through a broadcast communication channel.</rdfs:comment>
-        <rdfs:label xml:lang="en">Broadcast_Remote_ID</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.dronetology.net/dronetology#C2Link -->
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#C2Link">
@@ -2527,6 +2520,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#CongestedAirSpaceVolume">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#AirSpaceVolume"/>
+        <rdfs:comment xml:lang="en">CongestedAirSpace. Air volume with at least two aircraft in conflict.</rdfs:comment>
+        <rdfs:label xml:lang="en">CongestedAirSpace</rdfs:label>
     </owl:Class>
     
 
@@ -2686,16 +2681,6 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
         <rdfs:subClassOf rdf:resource="http://qudt.org/schema/qudt/Quantity"/>
         <rdfs:comment xml:lang="en">Dimension. A measurable extent of a particular kind, such as length, breadth, depth, or height.</rdfs:comment>
         <rdfs:label xml:lang="en">Dimension</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.dronetology.net/dronetology#Direct_Remote_ID -->
-
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Direct_Remote_ID">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#RemoteID"/>
-        <rdfs:comment xml:lang="en">Direct_Remote_ID. Direct Remote Identification.</rdfs:comment>
-        <rdfs:label xml:lang="en">Direct_Remote_ID</rdfs:label>
     </owl:Class>
     
 
@@ -3461,10 +3446,12 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#Li-ionBattery -->
+    <!-- http://www.dronetology.net/dronetology#LiIonBattery -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#Li-ionBattery">
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#LiIonBattery">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Battery"/>
+        <rdfs:comment xml:lang="en">LiIonBattery. A lithium-ion is a type of rechargeable battery that uses the reversible intercalation of Li+ ions into electronically conducting solids to store energy.</rdfs:comment>
+        <rdfs:label xml:lang="en">LiIonBattery</rdfs:label>
     </owl:Class>
     
 
@@ -3473,6 +3460,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#LiPoBattery">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Battery"/>
+        <rdfs:comment xml:lang="en">LiPoBattery. A lithium polymer battery is a rechargeable battery of lithium-ion technology using a polymer electrolyte instead of a liquid electrolyte.</rdfs:comment>
+        <rdfs:label xml:lang="en">LiPoBattery</rdfs:label>
     </owl:Class>
     
 
@@ -4155,6 +4144,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#NiCdBattery">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Battery"/>
+        <rdfs:comment xml:lang="en">NiCdBattery. The nickel–cadmium battery is a type of rechargeable battery using nickel oxide hydroxide and metallic cadmium as electrodes.</rdfs:comment>
+        <rdfs:label xml:lang="en">NiCdBattery</rdfs:label>
     </owl:Class>
     
 
@@ -4163,6 +4154,8 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
 
     <owl:Class rdf:about="http://www.dronetology.net/dronetology#NiMHBattery">
         <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#Battery"/>
+        <rdfs:comment xml:lang="en">NiMHBattery. A type of rechargeable battery that negative electrodes use a hydrogen-absorbing alloy.</rdfs:comment>
+        <rdfs:label xml:lang="en">NiMHBattery</rdfs:label>
     </owl:Class>
     
 
@@ -4523,22 +4516,22 @@ necessary for a UAV to operate autonomously and to infer new knowledge to improv
     
 
 
-    <!-- http://www.dronetology.net/dronetology#RemoteID -->
+    <!-- http://www.dronetology.net/dronetology#RemoteIDMessage -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RemoteID">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#CommunicationSystem"/>
-        <rdfs:comment xml:lang="en">RemoteID. A system that allows drones to transmit identification and location information.</rdfs:comment>
-        <rdfs:label xml:lang="en">RemoteID</rdfs:label>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RemoteIDMessage">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#CommunicationMessage"/>
+        <rdfs:comment xml:lang="en">RemoteIDMessage. A message sent by a wireless technology that broadcast drone identificator.</rdfs:comment>
+        <rdfs:label xml:lang="en">RemoteIDMessage</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.dronetology.net/dronetology#RemoteId -->
+    <!-- http://www.dronetology.net/dronetology#RemoteIDModule -->
 
-    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RemoteId">
-        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#MessageReceived"/>
-        <rdfs:comment xml:lang="en">RemoteId. A message sent by a wireless technology that broadcast drone identificator.</rdfs:comment>
-        <rdfs:label xml:lang="en">RemoteId</rdfs:label>
+    <owl:Class rdf:about="http://www.dronetology.net/dronetology#RemoteIDModule">
+        <rdfs:subClassOf rdf:resource="http://www.dronetology.net/dronetology#CommunicationSystem"/>
+        <rdfs:comment xml:lang="en">RemoteIDModule. A radio module that allows drones to transmit identification and location information.</rdfs:comment>
+        <rdfs:label xml:lang="en">RemoteIDModule</rdfs:label>
     </owl:Class>
     
 
@@ -5257,10 +5250,10 @@ IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY DAMAGES, INCLUDING BUT NOT LIMIT
         <rdfs:label xml:lang="en">DronetologyLicenseTerms</rdfs:label>
     </owl:NamedIndividual>
     <rdf:Description>
-        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100</owl:minCardinality>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">500</owl:maxCardinality>
     </rdf:Description>
     <rdf:Description>
-        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">500</owl:maxCardinality>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100</owl:minCardinality>
     </rdf:Description>
     
 
